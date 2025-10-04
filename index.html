@@ -1,34 +1,387 @@
-<meta name="viewport" content="user-scalable=no,initial-scale=1.0001,maximum-scale=1.0001,viewport-fit=cover">
-<link href="https://static.xx.fbcdn.net/rsrc.php/v3/y-/r/QikdLXqcxS_.png" rel="apple-touch-icon-precomposed">
-<meta name="referrer" content="default" id="meta_referrer">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="manifest" id="MANIFEST_LINK" href="https://www.messenger.com/data/manifest/" crossorigin="use-credentials" />
-
-
-<!-- Primary Meta Tags -->
-<title>Cuongbok có quà cho bạn!!!</title>
-<meta name="title" content="Cuongbok có quà cho bạn!!!" />
-<meta name="description" content="Nhấn để nhận" />
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cuongbok.id.vn/" />
-<meta property="og:title" content="Cuongbok có quà cho bạn!!!" />
-<meta property="og:description" content="Nhấn để nhận" />
-<meta property="og:image" content="https://i.imgur.com/CuGwp4R.jpg" />
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://cuongbok.id.vn/" />
-<meta property="twitter:title" content="Cuongbok có quà cho bạn!!!" />
-<meta property="twitter:description" content="Nhấn để nhận" />
-<meta property="twitter:image" content="https://i.imgur.com/CuGwp4R.jpg" />
-
-<!-- Meta Tags Generated with https://metatags.io -->
-
-<script>
-    //ahihi 
-    var text = 'Em yêu anh';
-    window.location.href = `https://www.messenger.com/t/100024362122150/?text=${encodeURIComponent(text)}`;
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuongbokreal - Linktree</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Cấu hình CSS cho Dark/Light Mode và thẩm mỹ chung -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        
+        /* Base and Transition */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 5rem 1rem 2rem 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .link-container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Light Mode Styles (Default) */
+        .light body {
+            background-color: #f3f4f6; /* gray-100 */
+            color: #1f2937; /* gray-800 */
+        }
+        .light .link-card {
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb; /* gray-200 */
+        }
+        .light .link-card:hover {
+            background-color: #f9fafb; /* gray-50 */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        .light .promo-card {
+            background-color: #fef2f2; /* Red-50 */
+            border-color: #ef4444; /* Red-500 */
+        }
+        
+        /* Dark Mode Styles */
+        .dark body {
+            background-color: #0d0d0d;
+            color: #f3f4f6;
+        }
+        .dark .link-card {
+            background-color: #1f1f1f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            border: 1px solid #374151; /* gray-700 */
+        }
+        .dark .link-card:hover {
+            background-color: #2d2d2d;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+            border-color: #a78bfa; /* Subtle purple glow */
+        }
+        .dark .promo-card {
+            background-color: #450a0a; /* Red-950 */
+            border-color: #f87171; /* Red-400 */
+        }
+
+        /* Theme Toggle Button Style */
+        #theme-toggle {
+            transition: all 0.3s;
+        }
+        
+        /* Copy Notification Style */
+        #copy-notification {
+            z-index: 1000;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        /* Custom Colors for Group Headers (Tailwind-like) */
+        .header-purple { color: #8b5cf6; border-color: #8b5cf633; }
+        .header-green { color: #10b981; border-color: #10b98133; }
+        .header-blue { color: #3b82f6; border-color: #3b82f633; }
+
+    </style>
+</head>
+<body>
+
+<!-- NÚT CHUYỂN ĐỔI GIAO DIỆN SÁNG/TỐI -->
+<button id="theme-toggle" class="fixed top-4 right-4 p-3 rounded-full shadow-xl z-10 
+    bg-gray-200 text-gray-800 hover:bg-gray-300 
+    dark:bg-gray-800 dark:text-yellow-300 dark:hover:bg-gray-700">
+    
+    <!-- Icon Placeholder - JS sẽ cập nhật icon -->
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+</button>
+
+<div class="link-container">
+    <!-- KHU VỰC THÔNG BÁO COPY LINK -->
+    <div id="copy-notification" class="fixed top-5 left-1/2 -translate-x-1/2 p-4 bg-yellow-600 text-white font-bold text-center rounded-lg shadow-2xl opacity-0 transform translate-y-[-10px] pointer-events-none">
+        <p id="notification-text"></p>
+    </div>
+
+    <!-- 1. THÔNG TIN CÁ NHÂN -->
+    <header class="text-center mb-8">
+        <!-- Ảnh đại diện Placeholder -->
+        <div class="w-28 h-28 mx-auto bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center mb-3 border-4 border-gray-400 dark:border-gray-600 shadow-xl">
+            <span class="text-3xl text-gray-600 dark:text-gray-300">👤</span>
+        </div>
+        <h1 class="text-3xl font-extrabold mb-1">cuongbokreal</h1>
+        <p class="text-md font-medium text-gray-600 dark:text-gray-400">
+            Liên hệ CV: <a href="tel:0961377370" class="underline text-purple-600 dark:text-purple-400 hover:text-purple-500 transition">0961.377.370</a>
+            hoặc <a href="mailto:ngcuongbok109@gmail.com" class="underline text-purple-600 dark:text-purple-400 hover:text-purple-500 transition">ngcuongbok109@gmail.com</a>
+        </p>
+    </header>
+
+    <!-- 2. HƯỚNG DẪN QUAN TRỌNG & PROMO CARD -->
+    <div class="promo-card p-4 mb-8 rounded-2xl shadow-lg border-2">
+        <h2 class="text-xl font-extrabold text-red-600 dark:text-red-400 mb-2 flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            LƯU Ý QUAN TRỌNG
+        </h2>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-2">"MN hãy Copy link rồi mở bằng trình duyệt ngoài nha (Google, Safari,…) "</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Bạn hãy tìm mục cần truy cập, sau đó **nhấn biểu tượng Sao chép** ($\text{C}_2$) bên phải liên kết. Vui lòng dán vào Google hay Safari để truy cập nha! 🥰</p>
+        <!-- ĐÃ XÓA CLASS 'link-card' KHỎI THẺ A NÀY ĐỂ TRÁNH LỖI JAVASCRIPT -->
+        <a href="https://www.facebook.com/capoolocked" target="_blank" class="mt-3 block text-center bg-red-700 hover:bg-red-600 text-white font-semibold py-3 rounded-xl text-base transition duration-200 shadow-lg hover:shadow-xl">
+            Liên hệ mua hàng nhanh (Netflix, ChatGPT, Canva,...)
+        </a>
+    </div>
+
+    <!-- 3. KHU VỰC LIÊN KẾT ĐƯỢC TẠO BẰNG JS -->
+    <div id="link-sections">
+        <!-- Content will be injected here by JavaScript -->
+    </div>
+    
+    <!-- 4. LIÊN KẾT MẠNG XÃ HỘI (SOCIAL LINKS) -->
+    <div class="mb-10 pt-6">
+        <h2 class="text-2xl font-bold mb-4 text-center header-blue border-b pb-2">
+            📱 Mạng Xã Hội
+        </h2>
+        <div class="flex justify-center space-x-6">
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@cuongbokreal" target="_blank" class="text-4xl hover:text-pink-500 transition" title="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M12.531 10.42v4.86c0 .888-.718 1.606-1.606 1.606-.888 0-1.606-.718-1.606-1.606V9.897c0-2.222 1.76-4.013 3.93-4.013 1.95 0 3.393.905 4.14 2.378.077.155.154.31.23.465V6.735c0-.154.077-.31.154-.465-.463-1.08-1.002-2.16-1.606-3.13C16.51 1.77 14.56 0 12.53 0c-4.8 0-8.73 3.88-8.73 8.675v.51c0 4.795 3.93 8.675 8.73 8.675s8.73-3.88 8.73-8.675v-.51c0-2.222-1.76-4.013-3.93-4.013-.23 0-.462.03-.692.09l-.077.02-.154.05c-.154.04-.308.08-.462.11-.077.01-.154.02-.23.03l-.077.01c-.154.02-.308.03-.462.04v-.01c-.077.01-.154.02-.23.03z"/></svg>
+            </a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@cuongbokreal" target="_blank" class="text-4xl hover:text-red-600 transition" title="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9"><path d="M19.615 3.197a2.532 2.532 0 0 0-1.782-1.777C15.707 1 12 1 12 1s-3.707 0-5.833.42c-.675.13-1.35.454-1.782 1.777C4.385 5.385 4 7.697 4 10.5v3c0 2.803.385 5.115.615 7.303a2.532 2.532 0 0 0 1.782 1.777C8.293 23 12 23 12 23s3.707 0 5.833-.42a2.532 2.532 0 0 0 1.782-1.777C19.615 18.615 20 16.303 20 13.5v-3c0-2.803-.385-5.115-.615-7.303zM10 16.5v-9l6 4.5z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/cuongbok.dev" target="_blank" class="text-4xl hover:text-blue-600 transition" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.241.195 2.241.195v2.46h-1.26c-1.243 0-1.63.773-1.63 1.563V12h3.088l-.497 2.987h-2.591v6.987A10.012 10.012 0 0 0 22 12z"/></svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:cuongbokreal@gmail.com" target="_blank" class="text-4xl hover:text-gray-500 dark:hover:text-gray-400 transition" title="Email">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT CHO DỮ LIỆU, COPY LINK VÀ CHUYỂN ĐỔI THEME -->
+<script>
+    // Dữ liệu TẤT CẢ các liên kết được quản lý tại đây
+    const linkData = [
+        {
+            group: "🛠️ Công cụ Web Cá nhân (CuongbokIT)",
+            colorClass: "header-purple",
+            links: [
+                { title: "Tạo Trang Mưa Chữ Tình Yêu Rain Lover Miễn Phí", url: "https://cuongbokit.blogspot.com/2025/09/tao-trang-mua-chu-tinh-yeu-rain-lover-mien-phi.html", important: false },
+                { title: "Tạo Trang Rủ Đi Chơi, Tỏ Tình Auto Đồng Ý", url: "https://cuongbokit.blogspot.com/2025/07/tao-trang-du-di-choi-auto-dong-y-say-yes-to-me.html", important: false },
+                { title: "Tạo QR Tình Yêu GALAXY V2 Dải Ngân Hà", url: "https://cuongbokit.blogspot.com/2025/07/tao-qr-galaxy-tinh-yeu-v2.html", important: false },
+                { title: "Bản Nâng Cấp - QR Tình Yêu Upload Được Nhiều Ảnh Cùng Lúc", url: "https://cuongbokit.blogspot.com/2025/06/tao-trang-qr-code-tinh-yeu-galaxy-3d-pro.html", important: false },
+                { title: "Tạo Trang QR Code Tình Yêu Miễn Phí Cực Chất", url: "https://cuongbokit.blogspot.com/2025/06/tao-trang-qr-code-tinh-yeu-galaxy-3d.html", important: false },
+                { title: "Trang chủ CuongbokIT", url: "https://cuongbokit.blogspot.com", important: false },
+            ]
+        },
+        {
+            group: "💰 Tài khoản Premium Giá Rẻ (Gamikey)",
+            colorClass: "header-green",
+            links: [
+                // Link quan trọng/ưu tiên cao
+                { title: "👉 Xem Bảng Giá SP Tài Khoản Giá Rẻ (Kèm mã giảm giá: cuongbokreal giảm 20-50k)", url: "https://docs.google.com/spreadsheets/d/1oGqXOMm18FDOIB7gY7q4Ls8QYCJ_9V79/edit", important: true, icon: "📄", bg: "bg-green-700 hover:bg-green-600 text-white animate-pulse" },
+                // Các link còn lại
+                { title: "Tài khoản Google AI (Gemini Advanced)", url: "https://gamikey.com/tai-khoan-gemini-advanced/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Tài khoản Netflix Premium 4K", url: "https://gamikey.com/tai-khoan-netflix-premium/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Chat GPT Plus giá rẻ từ 50k", url: "https://gamikey.com/nang-cap-chatgpt-plus-1-thang/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Mua tài khoản Capcut Pro 12 tháng giá rẻ - Gamikey", url: "https://gamikey.com/nang-cap-tai-khoan-capcut-pro/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Youtube Premium - Nâng cấp chính chủ", url: "https://gamikey.com/mua-youtube-premium/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Nâng cấp Spotify Premium chất lượng cao", url: "https://gamikey.com/mua-spotify-premium/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Canva Pro giá rẻ chỉ 49K. Bảo hành vĩnh viễn", url: "https://gamikey.com/tai-khoan-canva-pro/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Nâng cấp Duolingo Super giá rẻ", url: "https://gamikey.com/nang-cap-tai-khoan-duolingo-super/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Đăng ký truyền hình K+ trên Vieon", url: "https://gamikey.com/mua-tai-khoan-vieon-all-access-12-thang-chinh-chu/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+                { title: "Mua Tài Khoản FPT Play Giá Rẻ - Chỉ 59K/2 Tháng", url: "https://gamikey.com/tai-khoan-fpt-play/?ref=Nguyen-Ngoc-Cuong-LTA7" },
+            ]
+        }
+    ];
+
+    // Hàm copy text to clipboard (sử dụng document.execCommand cho tương thích iframe)
+    function copyToClipboard(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = 0;
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        let success = false;
+        try {
+            success = document.execCommand('copy');
+        } catch (err) {
+            console.error('Không thể sao chép: ', err);
+        } finally {
+            document.body.removeChild(textarea);
+        }
+        return success;
+    }
+
+    // Hàm hiển thị thông báo
+    function showNotification(message) {
+        const notification = document.getElementById('copy-notification');
+        const textElement = document.getElementById('notification-text');
+        textElement.innerHTML = message; // Dùng innerHTML để hỗ trợ **bold**
+        
+        // Reset state
+        notification.classList.remove('opacity-100', 'translate-y-0');
+        notification.classList.add('opacity-0', 'translate-y-[-10px]');
+        
+        // Show notification
+        setTimeout(() => {
+            notification.classList.remove('opacity-0', 'translate-y-[-10px]');
+            notification.classList.add('opacity-100', 'translate-y-0');
+        }, 10); // delay nhỏ để đảm bảo transition hoạt động
+
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+            notification.classList.remove('opacity-100', 'translate-y-0');
+            notification.classList.add('opacity-0', 'translate-y-[-10px]');
+        }, 3000);
+    }
+    
+    // --- KHU VỰC LOGIC CHUYỂN ĐỔI THEME ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    const moonIcon = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>';
+    const sunIcon = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>';
+
+    function updateTheme(theme) {
+        if (theme === 'dark') {
+            htmlElement.classList.add('dark');
+            htmlElement.classList.remove('light');
+            themeToggle.innerHTML = sunIcon;
+            localStorage.setItem('theme', 'dark');
+        } else {
+            htmlElement.classList.add('light');
+            htmlElement.classList.remove('dark');
+            themeToggle.innerHTML = moonIcon;
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    function initializeTheme() {
+        const storedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (storedTheme) {
+            updateTheme(storedTheme);
+        } else if (systemPrefersDark) {
+            updateTheme('dark');
+        } else {
+            updateTheme('light');
+        }
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        updateTheme(newTheme);
+    });
+    
+    // Nghe sự kiện thay đổi theme hệ thống
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        // Chỉ cập nhật nếu người dùng chưa chọn theme thủ công (không có trong localStorage)
+        if (!localStorage.getItem('theme')) {
+             updateTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+
+    // --- KHU VỰC LOGIC RENDER LINKS ---
+
+    function renderLinks() {
+        const container = document.getElementById('link-sections');
+        let html = '';
+
+        linkData.forEach(groupItem => {
+            html += `
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 ${groupItem.colorClass} border-b pb-2">
+                        ${groupItem.group}
+                    </h2>
+                    <nav class="space-y-4">
+            `;
+            
+            groupItem.links.forEach(link => {
+                const isImportant = link.important ? true : false;
+                const baseClasses = "link-card flex justify-between items-center p-4 rounded-2xl transition duration-200 shadow-md";
+                
+                // Mặc định cho link thường
+                let linkClasses = baseClasses + " text-gray-800 dark:text-white dark:hover:border-purple-400";
+                let linkIcon = link.icon || '🔗';
+                
+                // Override cho link quan trọng (ví dụ Bảng Giá)
+                if (isImportant) {
+                    linkClasses = baseClasses + " font-bold shadow-xl hover:shadow-2xl " + link.bg;
+                    linkIcon = link.icon || '📄';
+                } else {
+                    // Thêm hover cho link thường (cần đảm bảo linkClass ban đầu không có màu nền)
+                    linkClasses += " dark:bg-gray-800 dark:hover:bg-gray-700 bg-white hover:bg-gray-50 text-gray-800 dark:text-white";
+                }
+
+                html += `
+                    <div class="${linkClasses}" data-url="${link.url}" data-title="${link.title}">
+                        <a href="${link.url}" target="_blank" class="flex-grow min-w-0" rel="noopener noreferrer">
+                            <span class="truncate pr-4">${link.title}</span>
+                        </a>
+                        <!-- Nút Copy -->
+                        <span class="copy-link-btn text-lg font-mono ml-3 cursor-pointer p-2 rounded-full flex-shrink-0 hover:bg-gray-600/30 text-gray-500 dark:text-gray-400">
+                            <!-- Copy SVG Icon -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v4m0 0v4m0-4h4m-4 0H4m12 0v4m0 0v4m0-4h4m-4 0H4M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"></path></svg>
+                        </span>
+                    </div>
+                `;
+            });
+
+            html += `
+                    </nav>
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+        setupCopyListeners();
+    }
+    
+    // --- KHU VỰC SETUP COPY LISTENERS ---
+
+    function setupCopyListeners() {
+        const linkCards = document.querySelectorAll('.link-card');
+        
+        linkCards.forEach(card => {
+            const url = card.getAttribute('data-url');
+            const title = card.getAttribute('data-title');
+            const linkElement = card.querySelector('a');
+            const copyButton = card.querySelector('.copy-link-btn');
+            
+            // 1. Setup Copy Button Click
+            copyButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                if (copyToClipboard(url)) {
+                    showNotification(`Đã sao chép: **${title}**. Vui lòng dán vào trình duyệt ngoài để truy cập!`);
+                } else {
+                    showNotification('Lỗi: Không thể sao chép liên kết.');
+                }
+            });
+
+            // 2. Setup Link Click (Cố gắng mở, nhưng vẫn nhắc Copy)
+            linkElement.addEventListener('click', (e) => {
+                e.stopPropagation();
+                
+                // Mặc dù đã mở tab mới, vẫn hiển thị thông báo nhắc nhở Copy
+                showNotification(`Mở: **${title}**. Nếu không hoạt động, vui lòng **Copy** ($\text{C}_2$) và dán ra trình duyệt ngoài.`);
+            });
+        });
+    }
+
+    // Chạy các hàm khởi tạo khi DOM đã tải xong
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeTheme();
+        renderLinks();
+    });
 </script>
+
+</body>
+</html>
