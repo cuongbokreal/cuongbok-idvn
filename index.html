@@ -66,6 +66,19 @@
             border-color: #f87171; /* Red-400 */
         }
 
+        /* Thẻ liên kết quan trọng có nhấp nháy */
+        .highlight-pulse {
+            /* Đảm bảo màu sắc nổi bật */
+            background-color: #ef4444 !important; /* Red-500 */
+            color: white !important;
+            border-color: #f87171 !important;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.7); /* Red glow */
+        }
+        /* Tùy chỉnh hiệu ứng hover cho thẻ nhấp nháy */
+        .highlight-pulse:hover {
+             background-color: #dc2626 !important; /* Red-600 */
+        }
+
         /* Theme Toggle Button Style */
         #theme-toggle {
             transition: all 0.3s;
@@ -122,7 +135,6 @@
         </h2>
         <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-2">"MN hãy Copy link rồi mở bằng trình duyệt ngoài nha (Google, Safari,…) "</p>
         <p class="text-sm text-gray-600 dark:text-gray-400">Bạn hãy tìm mục cần truy cập, sau đó **nhấn biểu tượng Sao chép** ($\text{C}_2$) bên phải liên kết. Vui lòng dán vào Google hay Safari để truy cập nha! 🥰</p>
-        <!-- ĐÃ XÓA CLASS 'link-card' KHỎI THẺ A NÀY ĐỂ TRÁNH LỖI JAVASCRIPT -->
         <a href="https://www.facebook.com/capoolocked" target="_blank" class="mt-3 block text-center bg-red-700 hover:bg-red-600 text-white font-semibold py-3 rounded-xl text-base transition duration-200 shadow-lg hover:shadow-xl">
             Liên hệ mua hàng nhanh (Netflix, ChatGPT, Canva,...)
         </a>
@@ -180,8 +192,8 @@
             group: "💰 Tài khoản Premium Giá Rẻ (Gamikey)",
             colorClass: "header-green",
             links: [
-                // Link quan trọng/ưu tiên cao
-                { title: "👉 Xem Bảng Giá SP Tài Khoản Giá Rẻ (Kèm mã giảm giá: cuongbokreal giảm 20-50k)", url: "https://docs.google.com/spreadsheets/d/1oGqXOMm18FDOIB7gY7q4Ls8QYCJ_9V79/edit", important: true, icon: "📄", bg: "bg-green-700 hover:bg-green-600 text-white animate-pulse" },
+                // CẬP NHẬT: Thay đổi màu nền/chữ cho link quan trọng để làm nổi bật lớp CSS highlight-pulse
+                { title: "👉 Xem Bảng Giá SP Tài Khoản Giá Rẻ (Kèm mã giảm giá: cuongbokreal giảm 20-50k)", url: "https://docs.google.com/spreadsheets/d/1oGqXOMm18FDOIB7gY7q4Ls8QYCJ_9V79/edit", important: true, icon: "📄", bg: "highlight-pulse" },
                 // Các link còn lại
                 { title: "Tài khoản Google AI (Gemini Advanced)", url: "https://gamikey.com/tai-khoan-gemini-advanced/?ref=Nguyen-Ngoc-Cuong-LTA7" },
                 { title: "Tài khoản Netflix Premium 4K", url: "https://gamikey.com/tai-khoan-netflix-premium/?ref=Nguyen-Ngoc-Cuong-LTA7" },
@@ -308,12 +320,11 @@
                 
                 // Mặc định cho link thường
                 let linkClasses = baseClasses + " text-gray-800 dark:text-white dark:hover:border-purple-400";
-                let linkIcon = link.icon || '🔗';
                 
-                // Override cho link quan trọng (ví dụ Bảng Giá)
+                // Override cho link quan trọng (đã dùng class CSS mới để đảm bảo màu)
                 if (isImportant) {
-                    linkClasses = baseClasses + " font-bold shadow-xl hover:shadow-2xl " + link.bg;
-                    linkIcon = link.icon || '📄';
+                    // Thêm highlight-pulse và animate-pulse
+                    linkClasses = baseClasses + " font-bold shadow-xl hover:shadow-2xl highlight-pulse animate-pulse";
                 } else {
                     // Thêm hover cho link thường (cần đảm bảo linkClass ban đầu không có màu nền)
                     linkClasses += " dark:bg-gray-800 dark:hover:bg-gray-700 bg-white hover:bg-gray-50 text-gray-800 dark:text-white";
